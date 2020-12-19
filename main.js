@@ -1,7 +1,8 @@
 var listElement = document.querySelector('#app ul');
 var inputElement = document.querySelector('#app input');
 var buttonELement = document.querySelector('#app button');
-
+var root = document.body
+root.style.fontFamily = 'Sf Pro Display';
 var todos = JSON.parse(localStorage.getItem('list_todos')) || [];
 
 function renderTodos() {
@@ -13,7 +14,7 @@ function renderTodos() {
         linkElement.setAttribute('href', '#');
         var pos = todos.indexOf(todo);
         linkElement.setAttribute('onclick', 'deleteTodo(' + pos + ')')
-        linkElement.style.color = '#000';
+        linkElement.style.color = '#0d0';
         linkElement.style.textDecoration = 'none';
         var linkText = document.createTextNode(' Excluir');
         linkElement.appendChild(linkText);
